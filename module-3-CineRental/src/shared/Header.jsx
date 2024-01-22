@@ -8,7 +8,7 @@ const Header = () => {
     <header>
       <nav className="container flex items-center justify-between py-6 space-x-10">
         <a href="index.html">
-          <img src={logo} width="139" height="26" alt="" />
+          <img src={logo} width="139" height="26" alt="logo" />
         </a>
 
         <ul className="flex items-center space-x-5">
@@ -17,7 +17,7 @@ const Header = () => {
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img src={ring} width="24" height="24" alt="" />
+              <img src={ring} width="24" height="24" alt="ring" />
             </a>
           </li>
           <li>
@@ -25,7 +25,7 @@ const Header = () => {
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img src={sun} width="24" height="24" alt="" />
+              <img src={sun} width="24" height="24" alt="sun" />
             </a>
           </li>
           <li>
@@ -33,7 +33,7 @@ const Header = () => {
               className="bg-primary/20 dark:bg-primary/[7%] rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img src={shoppingCart} width="24" height="24" alt="" />
+              <img src={shoppingCart} width="24" height="24" alt="cart" />
             </a>
           </li>
         </ul>

@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import { useCart, useCartDispatch } from '../../contexts/CartContext';
 import { getImageUrl } from '../../utils/movie-utility';
 import MovieDetailsModal from './MovieDetailsModal';
 import Rating from './Rating';
 
 const MovieCard = ({ movie }) => {
   const [showModal, setShowModal] = useState(false);
+  const cart = useCart();
+  const dispatch = useCartDispatch();
   const { cover, title, genre, rating, price } = movie;
 
   //* event handlers
@@ -17,17 +21,34 @@ const MovieCard = ({ movie }) => {
   };
 
   const handleAddToCart = (e, movie) => {
-    e.stopPropagation();
-    console.log(movie);
+    e.stopPropagation(); //* stop event bubbling
+
+    const isExists = cart.find((cartMovie) => cartMovie.id === movie.id);
+
+    if (isExists) {
+      return toast.error(
+        `The movie ${movie.title} has been added to the Cart already !!`
+      );
+    }
+
+    dispatch({
+      type: 'ADD_TO_CART',
+      payload: {
+        ...movie,
+      },
+    });
+
+    toast.success(`Added ${movie.title} to Cart !`);
   };
 
   return (
     <>
+      {/* Modal */}
       {showModal && (
         <MovieDetailsModal
           movie={movie}
-          handleModalClose={handleModalClose}
           handleAddToCart={handleAddToCart}
+          handleModalClose={handleModalClose}
         />
       )}
 

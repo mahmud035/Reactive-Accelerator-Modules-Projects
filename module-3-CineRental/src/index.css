@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* IMPORTANT: Must Need To Do for Theme-Switching. When I toggle the icons (sun or moon) inside the Header Component, this "dark" class is added to "html" tag Dynamically. */
+@layer components {
+  .dark {
+    @apply bg-[#171923] text-white;
+  }
+}

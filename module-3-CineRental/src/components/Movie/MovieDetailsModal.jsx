@@ -12,8 +12,8 @@ const MovieDetailsModal = ({ movie, handleAddToCart, handleModalClose }) => {
             src={getImageUrl(cover)}
             alt=""
           />
-          {/* FIXME: need to change bg-color */}
-          <div className="p-5 bg-white lg:p-11">
+
+          <div className="p-5 lg:p-11">
             <div className="">
               <h2 className="text-3xl lg:text-[50px] mb-2 font-bold">
                 {title}
@@ -34,7 +34,7 @@ const MovieDetailsModal = ({ movie, handleAddToCart, handleModalClose }) => {
               </a>
               <a
                 onClick={handleModalClose}
-                className="border border-[#74766F] rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#4b4949] dark:text-gray-500 font-semibold text-sm"
+                className="border border-[#74766F] rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#4b4949] dark:text-gray-200 font-semibold text-sm"
                 href="#"
               >
                 Cancel

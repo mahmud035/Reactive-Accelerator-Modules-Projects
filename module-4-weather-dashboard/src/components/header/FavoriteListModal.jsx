@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 import { FavoriteContext } from '../../contexts/FavoriteContext';
+import { LocationContext } from '../../contexts/LocationContext';
 
-const FavoriteListModal = () => {
+const FavoriteListModal = ({ handleShowModal }) => {
   const { favorites } = useContext(FavoriteContext);
-  console.log(favorites);
+  const { setSelectedLocation } = useContext(LocationContext);
 
   return (
     <div className="absolute right-0 max-w-xs py-4 text-black bg-white border-gray-500 rounded-md shadow-lg top-16 ">
@@ -11,7 +12,14 @@ const FavoriteListModal = () => {
       <ul className="space-y-2 mt-4 *:py-2 *:px-4 *:cursor-pointer">
         {favorites.length > 0 ? (
           favorites.map((fav) => (
-            <li key={fav.location} className="hover:bg-gray-200">
+            <li
+              key={fav.location}
+              className="hover:bg-gray-200"
+              onClick={() => {
+                setSelectedLocation({ ...fav }); // set selected location to LocationContext
+                handleShowModal(); // close modal
+              }}
+            >
               {fav.location}
             </li>
           ))

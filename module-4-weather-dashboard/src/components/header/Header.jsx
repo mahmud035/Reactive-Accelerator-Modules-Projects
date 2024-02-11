@@ -20,7 +20,9 @@ const Header = () => {
           <Search />
           <Favorite handleShowModal={handleShowModal} />
 
-          {showFavModal && <FavoriteListModal />}
+          {showFavModal && (
+            <FavoriteListModal handleShowModal={handleShowModal} />
+          )}
         </div>
       </nav>
     </header>

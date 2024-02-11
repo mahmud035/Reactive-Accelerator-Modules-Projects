@@ -1,21 +1,26 @@
+import { useContext } from 'react';
 import Header from '../components/header/Header';
 import WeatherBoard from '../components/weather/WeatherBoard';
-import FavoriteProvider from '../contexts/FavoriteContext';
-import LocationProvider from '../contexts/LocationContext';
-import WeatherProvider from '../contexts/WeatherContext';
+import { WeatherContext } from '../contexts/WeatherContext';
 
 const HomePage = () => {
+  const { loading } = useContext(WeatherContext);
+
   return (
-    <LocationProvider>
-      <WeatherProvider>
-        <FavoriteProvider>
+    <>
+      {loading.state ? (
+        <div>
+          <p>{loading.message}</p>
+        </div>
+      ) : (
+        <>
           <Header />
           <main>
             <WeatherBoard />
           </main>
-        </FavoriteProvider>
-      </WeatherProvider>
-    </LocationProvider>
+        </>
+      )}
+    </>
   );
 };
 

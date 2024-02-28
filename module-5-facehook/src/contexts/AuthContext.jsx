@@ -58,13 +58,13 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  //* logout
+  //* 7. logout
   const logout = () => {
     setLoading(true);
     return signOut(auth);
   };
 
-  //* get currently signed-in user
+  //* 8. get currently signed-in user
   useEffect(() => {
     const subscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {

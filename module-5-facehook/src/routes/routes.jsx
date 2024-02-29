@@ -1,8 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Login from '../components/Auth/Login';
-import Registration from '../components/Auth/Registration';
 import MainLayout from '../components/layout/MainLayout';
-import ErrorPage from '../shared/ErrorPage';
+import ErrorPage from '../pages/ErrorPage';
+import HomePage from '../pages/HomePage';
+import LoginPage from '../pages/LoginPage';
+import ProfilePage from '../pages/ProfilePage';
+import RegistrationPage from '../pages/RegistrationPage';
+import PrivateRoutes from './PrivateRoutes';
 
 const router = createBrowserRouter([
   {
@@ -11,12 +14,24 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/registration',
-        element: <Registration />,
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: '/register',
+        element: <RegistrationPage />,
       },
       {
         path: '/login',
-        element: <Login />,
+        element: <LoginPage />,
+      },
+      {
+        path: '/profile',
+        element: (
+          <PrivateRoutes>
+            <ProfilePage />
+          </PrivateRoutes>
+        ),
       },
     ],
   },

@@ -12,7 +12,7 @@ const Field = ({ label, children, htmlFor, error }) => {
       )}
       {children}
       {error && (
-        <div role="alert" className="text-red-600">
+        <div role="alert" className="text-red-600 animate-pulse">
           {error.message}
         </div>
       )}

@@ -7,7 +7,7 @@ const useAxios = () => {
   const { auth, setAuth } = useAuth();
 
   useEffect(() => {
-    //* Add a request interceptors
+    //* Add a request interceptor
     const requestIntercept = api.interceptors.request.use(
       (config) => {
         const authToken = auth?.authToken;
@@ -19,7 +19,7 @@ const useAxios = () => {
       (error) => Promise.reject(error)
     );
 
-    //* Add a response interceptors
+    //* Add a response interceptor
     const responseIntercept = api.interceptors.response.use(
       (response) => response,
       async (error) => {
@@ -40,7 +40,7 @@ const useAxios = () => {
             setAuth({ ...auth, authToken: token });
             console.log(`New Token: ${token}`);
 
-            // Retry thr original request with the new token
+            // Retry the original request with the new token
             originalRequest.headers.Authorization = `Bearer ${token}`;
             return axios(originalRequest);
           } catch (error) {

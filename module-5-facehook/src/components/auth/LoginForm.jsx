@@ -29,17 +29,16 @@ const LoginForm = () => {
 
       if (response.status === 200) {
         const { user, token } = response.data;
+
         if (token) {
           const authToken = token.token;
           const refreshToken = token.refreshToken;
           setAuth({ user, authToken, refreshToken });
           navigate('/');
-
           console.log(`Login time authToken: ${authToken}`);
         }
       }
     } catch (error) {
-      // console.log(error);
       setError('root.random', {
         type: 'random',
         message: `User with email ${formData.email} is not found`,
@@ -84,7 +83,10 @@ const LoginForm = () => {
         />
       </Field>
 
-      <p>{errors?.root?.random?.message}</p>
+      {/* Show error message if user is not found */}
+      {errors.root && (
+        <p className="pb-3 text-red-500">{errors?.root?.random?.message}</p>
+      )}
 
       {/* Submit  */}
       <Field>

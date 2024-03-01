@@ -10,7 +10,7 @@ const PrivateRoutes = ({ children }) => {
       {auth?.user ? (
         <>
           <Header />
-          <main className="mx-auto max-w-[1080px] py-8">
+          <main className="mx-auto max-w-[1024px] py-8">
             <div className="container">{children}</div>
           </main>
         </>

@@ -469,9 +469,9 @@
       "password": "$2b$08$t5Aar/0hgHTMdCeLtn3KhOlWDVIAHcFUTkRPeWASPhbYAea5kxKvW",
       "firstName": "Saad",
       "lastName": "Hasan",
-      "avatar": "uploads/avatar/avatar-1708849386635-121791126.png",
+      "avatar": "uploads/avatar/avatar-1709311659654-841308928.jpg",
       "email": "saadh392@mail.com",
-      "bio": "Saad is an excellent member of LWS who keeps himself updated with technology and stays relevant. He is a tech enthusiast and does not hesitate to help developers in need."
+      "bio": "Saad is an excellent member of LWS who keeps himself updated with technology and stays relevant. He is a tech enthusiast and does not hesitate to help developers in need. Update "
     },
     {
       "id": "1aeef0f0-77ba-456b-8b5b-d4145a9b5410",
@@ -485,10 +485,11 @@
       "id": "8fc0f0d6-396a-4ef4-922b-27ef5b4e8526",
       "password": "$2b$08$XLgmuBqthkljtrVqSXdnk.OotUpoGnArVSrn6CHHt/upkUGTX7N0C",
       "firstName": "Tapas",
-      "lastName": "Adhikary",
+      "lastName": "Hasan",
       "avatar": "uploads/avatar/avatar-1708770640883-148182382.png",
       "email": "atapas@email.com",
-      "bio": "A Ghost"
+      "bio": "A Ghost",
+      "firstname": "Saad"
     },
     {
       "id": "ea168626-058e-49dd-b23c-3000e7bd0172",

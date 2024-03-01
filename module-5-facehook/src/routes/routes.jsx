@@ -15,15 +15,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
-      },
-      {
-        path: '/register',
-        element: <RegistrationPage />,
-      },
-      {
-        path: '/login',
-        element: <LoginPage />,
+        element: (
+          <PrivateRoutes>
+            <HomePage />
+          </PrivateRoutes>
+        ),
       },
       {
         path: '/profile',
@@ -32,6 +28,14 @@ const router = createBrowserRouter([
             <ProfilePage />
           </PrivateRoutes>
         ),
+      },
+      {
+        path: '/register',
+        element: <RegistrationPage />,
+      },
+      {
+        path: '/login',
+        element: <LoginPage />,
       },
     ],
   },

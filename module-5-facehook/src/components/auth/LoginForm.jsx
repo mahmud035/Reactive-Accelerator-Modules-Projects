@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import Field from '../ui/Field';
 
 const LoginForm = () => {
@@ -14,9 +15,15 @@ const LoginForm = () => {
     },
   });
   const navigate = useNavigate();
+  const { setAuth } = useAuth();
 
   const onSubmit = (formData) => {
     console.log(formData);
+    // Make an API call
+    // Will Return Tokens and Logged in User Information
+
+    const user = { ...formData };
+    setAuth({ user });
     navigate('/');
   };
 
@@ -61,7 +68,7 @@ const LoginForm = () => {
       <Field>
         <button
           type="submit"
-          className="auth-input bg-lwsGreen font-bold text-deepDark transition-all hover:opacity-90"
+          className="font-bold transition-all auth-input bg-lwsGreen text-deepDark hover:opacity-90"
         >
           Login
         </button>

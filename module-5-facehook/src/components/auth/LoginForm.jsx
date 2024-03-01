@@ -20,7 +20,7 @@ const LoginForm = () => {
   const { setAuth } = useAuth();
 
   const onSubmit = async (formData) => {
-    //* Make an API call and It Will Return Tokens and Logged in User Information
+    //* Make an API call and it will return (accessToken, refreshToken and Logged in User Information)
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_SERVER_BASE_URL}/auth/login`,

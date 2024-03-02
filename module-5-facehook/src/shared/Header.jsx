@@ -10,7 +10,15 @@ const Header = () => {
   const { auth } = useAuth();
   const { state } = useProfile();
 
+  // Decide where to get the user
   const user = state?.user ?? auth?.user;
+
+  // Show dummy image if user's avatar is not found
+  const userNameFirstChar = user?.firstName?.slice(0, 1)?.toUpperCase();
+  const userAvatar =
+    user?.avatar !== null
+      ? `${import.meta.env.VITE_SERVER_BASE_URL}/${user?.avatar}`
+      : `https://dummyimage.com/200x200&text=${userNameFirstChar}`;
 
   return (
     <nav className="sticky top-0 z-50 border-b border-[#3F3F3F] bg-[#1E1F24] py-4">
@@ -36,11 +44,11 @@ const Header = () => {
 
           <Link to="/profile" className="flex-center !ml-8 gap-3">
             <span className="text-lg font-medium lg:text-xl">
-              {user?.firstName} {user.lastName}
+              {user?.firstName}
             </span>
             <img
               className="max-h-[32px] max-w-[32px] lg:max-h-[44px] lg:max-w-[44px] rounded-full"
-              src={`${import.meta.env.VITE_SERVER_BASE_URL}/${user.avatar}`}
+              src={userAvatar}
               alt="avatar"
             />
           </Link>

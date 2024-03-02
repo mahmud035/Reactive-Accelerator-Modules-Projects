@@ -4,13 +4,13 @@ import LoginForm from '../components/auth/LoginForm';
 
 const LoginPage = () => {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-deepDark py-8">
+    <main className="flex items-center justify-center min-h-screen py-8 bg-deepDark">
       <div className="max-w-[1368px] flex-1">
         <div className="container grid items-center gap-8 lg:grid-cols-2">
           {/* illustration and title */}
           <div>
             <img
-              className="mb-12 max-w-full max-lg:hidden"
+              className="max-w-full mb-12 max-lg:hidden"
               src={authIllustration}
               alt="auth_illustration"
             />
@@ -25,16 +25,17 @@ const LoginPage = () => {
             </div>
           </div>
           {/* illustration and title ends */}
+
           {/* login form */}
           <div className="card">
             <LoginForm />
 
             <div className="py-4 lg:py-6">
-              <p className="text-center text-xs text-gray-600/95 lg:text-sm">
+              <p className="text-xs text-center text-gray-600/95 lg:text-sm">
                 Don`t have account?{' '}
                 <Link
                   to="/register"
-                  className="text-white transition-all hover:text-lwsGreen hover:underline underline"
+                  className="text-white transition-all hover:text-lwsGreen hover:underline"
                 >
                   Create New
                 </Link>

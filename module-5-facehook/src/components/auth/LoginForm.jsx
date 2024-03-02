@@ -35,13 +35,14 @@ const LoginForm = () => {
           const refreshToken = token.refreshToken;
           setAuth({ user, authToken, refreshToken });
           navigate('/');
-          console.log(`Login time authToken: ${authToken}`);
+          // console.log(`Login time authToken: ${authToken}`);
         }
       }
     } catch (error) {
+      console.log(error);
       setError('root.random', {
         type: 'random',
-        message: `User with email ${formData.email} is not found`,
+        message: `${error?.response?.data?.error}`,
       });
     }
   };
@@ -75,7 +76,7 @@ const LoginForm = () => {
             },
           })}
           className={`auth-input ${
-            errors?.password ? 'border-red-500' : 'border-gray-500'
+            errors?.password ? 'border-red-500' : 'border-gray-200'
           }`}
           type="password"
           name="password"

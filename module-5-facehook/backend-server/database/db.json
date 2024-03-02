@@ -515,6 +515,80 @@
       "avatar": "uploads/avatar/avatar-1708802845791-219561000.png",
       "email": "rambo@email.com",
       "bio": "I am Rambo!!!"
+    },
+    {
+      "id": "5d05a258-451f-4a51-b7ac-546d0b5dab33",
+      "password": "$2b$08$C7mcoXlmYNkdyXGH9u0jMeLZnQgRkteq2YuaT8.P61sAZTaAmPcUa",
+      "firstName": "sadasdas",
+      "lastName": "dfdsf",
+      "avatar": null,
+      "email": "tom@gmail.com"
+    },
+    {
+      "id": "f71a9251-cd51-4ccd-b191-823d65d323b8",
+      "password": "$2b$08$avV150QiCe8HgGaE/Q3Wl.9AweNPH0T8zWwOmAvY3HioRW39AVIVC",
+      "firstName": "Tapas",
+      "lastName": "Adhikary",
+      "avatar": null,
+      "email": "ataaapas@email.com"
+    },
+    {
+      "id": "4674fe2b-1e49-4a10-be0a-28abf78e6a0e",
+      "password": "$2b$08$usIcBqcg8CYH5dybJ0P3w.q46lsGIp1ZY26P1aDllWed1Qd2pcUDW",
+      "firstName": "sdsadsa",
+      "lastName": "dfdsf",
+      "avatar": "uploads/avatar/avatar-1709372102106-418352124.jpg",
+      "email": "favin27457@keshitv.com",
+      "bio": ""
+    },
+    {
+      "id": "1c6b5d17-6d20-4ddd-82a5-a1acaf879825",
+      "password": "$2b$08$0y5kUGzfDVdxcYnU2diN..mYGrv.5oIo2GQYnG1CZ5r6uxPpKCHcy",
+      "firstName": "mahmud",
+      "lastName": "hasan",
+      "avatar": "uploads/avatar/avatar-1709372244818-757663166.jpg",
+      "email": "mhpcse@gmail.com",
+      "bio": "Self taught programmer learning Front End Development. "
+    },
+    {
+      "id": "8b061307-08aa-4890-a1f2-8a2f90c5ef41",
+      "password": "$2b$08$vtCu.S39YJ82Quh46Uh5q.5S5lWsuWqx3ZDzkYVXYkfJI7F26wZ6u",
+      "firstName": "sadasdas",
+      "lastName": "dfdsf",
+      "avatar": null,
+      "email": "tom2@gmail.com"
+    },
+    {
+      "id": "91e461cf-65f9-4281-ae77-83ef10fa631a",
+      "password": "$2b$08$VMmGP1UZOB8eK5K83QCjV.fQlqnGoSh2or1kKCzZ/pGsEZXDzERKq",
+      "firstName": "sdsadsa",
+      "lastName": "dfdsf",
+      "avatar": null,
+      "email": "tom3@gmail.com"
+    },
+    {
+      "id": "cd9cfe26-0c96-4fe6-824a-ce3d4ef011e9",
+      "password": "$2b$08$ADjrZompKL/WL5G4DgT.tOnQpH9Hfk6l.23kWCTIlxkj6maBDHezu",
+      "firstName": "sasd",
+      "lastName": "dfdsf",
+      "avatar": null,
+      "email": "biyirat272@sfpixel.com"
+    },
+    {
+      "id": "c7d643b9-2013-4a61-ba1b-43101e2bd90e",
+      "password": "$2b$08$mXb5p3dui0h9zb.rAjc8x.EJsz7CWygtEL4xAoiWt8ulrXSR/ZydK",
+      "firstName": "sdsadsa",
+      "lastName": "dfdsf",
+      "avatar": null,
+      "email": "cesop17424@fashlend.com"
+    },
+    {
+      "id": "70ddd6c1-2790-4725-9206-8293d86d66f1",
+      "password": "$2b$08$7bFJRA1A33t11IYLloc3CeM9O.sV64MjIawj831bg4oDn62bhm77G",
+      "firstName": "Tanmoy",
+      "lastName": "hasan",
+      "avatar": null,
+      "email": "reloj56367@sfpixel.com"
     }
   ]
 }

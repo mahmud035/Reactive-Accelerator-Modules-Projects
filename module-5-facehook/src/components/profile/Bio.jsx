@@ -11,6 +11,7 @@ const Bio = () => {
   const [bio, setBio] = useState(state?.user?.bio);
   const [editMode, setEditMode] = useState(false);
 
+  // Update Bio
   const handleBioEdit = async () => {
     // set loading to true
     dispatch({ type: actions.profile.DATA_FETCHING });

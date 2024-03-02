@@ -6,7 +6,7 @@ const PostList = ({ posts }) => {
       {posts?.length > 0 ? (
         posts.map((post) => <PostCard key={post?.id} post={post} />)
       ) : (
-        <p className="text-2xl text-center">No Posts Found!</p>
+        <p className="text-2xl text-center">No Post Found!</p>
       )}
     </div>
   );

@@ -12,6 +12,7 @@ const ProfilePage = () => {
   const { auth } = useAuth();
   const { api } = useAxios();
 
+  //* Fetch Login User Info (user data and user's posts data)
   useEffect(() => {
     // set loading to true
     dispatch({ type: actions.profile.DATA_FETCHING });
@@ -36,11 +37,12 @@ const ProfilePage = () => {
     };
 
     fetchProfile();
-  }, [auth?.user?.id]);
+  }, [api, auth?.user?.id, dispatch]);
 
   //* Decide what to render on UI
-  if (loading) return <div>Fetching your profile data...</div>;
-  if (error) return <div>{error.message}</div>;
+  if (loading)
+    return <p className="text-center">Fetching your profile data...</p>;
+  if (error) return <p>{error.message}</p>;
 
   return (
     <>

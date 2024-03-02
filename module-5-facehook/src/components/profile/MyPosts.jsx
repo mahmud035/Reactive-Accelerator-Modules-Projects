@@ -3,7 +3,7 @@ import PostList from '../posts/PostList';
 
 const MyPosts = () => {
   const { state } = useProfile();
-  const posts = state?.posts;
+  const { posts } = state || {};
 
   return (
     <>

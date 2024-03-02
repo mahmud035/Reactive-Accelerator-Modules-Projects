@@ -120,6 +120,16 @@
             "name": "Saad Hasan",
             "avatar": "uploads/avatar/avatar-1709359602298-935951666.jpg"
           }
+        },
+        {
+          "id": "6009d115-46aa-411f-a313-ffec3ba7eed6",
+          "comment": "new dsfdsfsdfsd",
+          "createdAt": "2024-03-02T14:29:50.943Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1709359602298-935951666.jpg"
+          }
         }
       ],
       "likes": [
@@ -354,22 +364,10 @@
           }
         }
       ],
-      "likes": [],
+      "likes": [
+        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
+      ],
       "createAt": "2024-02-24T12:31:17.794Z"
-    },
-    {
-      "id": "00ad2787-ec06-407c-9e5f-cd7acba20371",
-      "content": "While ESLint is designed to be run on the command line, it’s possible to use ESLint programmatically through the Node.js API. The purpose of the Node.js API is to allow plugin and tool authors to use the ESLint functionality directly, without going through the command line interface.\n\nNote: Use undocumented parts of the API at your own risk. Only those parts that are specifically mentioned in this document are approved for use and will remain stable and reliable. Anything left undocumented is unstable and may change or be removed at any point.",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [],
-      "createAt": "2024-02-25T06:03:47.813Z"
     },
     {
       "id": "82e8e57d-e7b8-4cfb-ac70-ff6283f0e8bf",
@@ -386,204 +384,57 @@
       "createAt": "2024-02-25T06:25:58.990Z"
     },
     {
-      "id": "5360bba3-1c5e-4ca8-84b3-6af75932126c",
-      "content": "",
+      "id": "c0f81162-a5b1-445d-b4dd-ff44fcef7ef7",
+      "content": "Hello world! How are you??",
       "image": null,
       "postType": "text",
       "author": {
         "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
         "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
+        "avatar": "uploads/avatar/avatar-1709396258597-599022469.jpeg"
       },
-      "comments": [],
-      "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
+      "comments": [
+        {
+          "id": "a3ff2240-6c70-43cd-8562-f26b17509afc",
+          "comment": "new comment",
+          "createdAt": "2024-03-02T17:32:34.835Z",
+          "author": {
+            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+            "name": "Saad Hasan",
+            "avatar": "uploads/avatar/avatar-1709396258597-599022469.jpeg"
+          }
+        }
       ],
-      "createAt": "2024-02-25T06:27:12.076Z"
+      "likes": [],
+      "createAt": "2024-03-02T17:32:09.241Z"
     },
     {
-      "id": "478c7100-6701-430e-bae2-2d6eebf4443f",
-      "content": "",
+      "id": "cd6ce805-ece3-4281-a001-0bc105bb9a6a",
+      "content": "value updated",
       "image": null,
       "postType": "text",
       "author": {
         "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
         "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
+        "avatar": "uploads/avatar/avatar-1709396258597-599022469.jpeg"
       },
       "comments": [],
       "likes": [],
-      "createAt": "2024-02-25T06:29:42.901Z"
+      "createAt": "2024-03-02T18:25:06.546Z"
     },
     {
-      "id": "fabefae7-c26d-4c5b-b4e4-7c150c3cbfb4",
-      "content": "",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [],
-      "createAt": "2024-02-25T06:35:20.401Z"
-    },
-    {
-      "id": "21c5d118-295f-4606-8147-e5a7570fa569",
-      "content": "I am good",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
-      ],
-      "createAt": "2024-02-25T06:36:33.889Z"
-    },
-    {
-      "id": "e8ef4c92-32b5-450a-a53a-8caef4032cb1",
-      "content": "cvbcvcv",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [],
-      "createAt": "2024-02-25T06:49:49.663Z"
-    },
-    {
-      "id": "c43c2a81-224c-456b-97c0-e46df3eb4f6d",
+      "id": "ec986fbb-1963-4f8d-925f-55d854852c37",
       "content": "test",
       "image": null,
       "postType": "text",
       "author": {
         "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
         "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
-      ],
-      "createAt": "2024-02-25T06:50:11.588Z"
-    },
-    {
-      "id": "ea5c610c-89ed-480a-9ca1-7feb13f2bae4",
-      "content": "I dont know",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
+        "avatar": "uploads/avatar/avatar-1709396258597-599022469.jpeg"
       },
       "comments": [],
       "likes": [],
-      "createAt": "2024-02-25T06:57:46.023Z"
-    },
-    {
-      "id": "782bbca7-dea3-4705-92aa-f191635c141a",
-      "content": "123",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [
-        {
-          "id": "46a49bb3-59cf-4ea3-9376-18b52cd564b1",
-          "comment": "Hi",
-          "createdAt": "2024-02-25T09:04:10.370Z",
-          "author": {
-            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-            "name": "Saad Hasan",
-            "avatar": "uploads/avatar/avatar-1708849386635-121791126.png"
-          }
-        }
-      ],
-      "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
-      ],
-      "createAt": "2024-02-25T06:59:36.184Z"
-    },
-    {
-      "id": "ae7a9d01-a4aa-46ad-b58a-f9c0e5ba1bf2",
-      "content": "456",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [
-        "6fd3ed42-2275-4d5f-a436-e5a3bf586c56"
-      ],
-      "createAt": "2024-02-25T07:01:10.425Z"
-    },
-    {
-      "id": "23be0512-6a10-4e71-b8cd-2ae47d9d7971",
-      "content": "SEII",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [],
-      "createAt": "2024-02-25T07:02:51.676Z"
-    },
-    {
-      "id": "e60c5172-ecb6-46b7-bd18-f66c8942a765",
-      "content": "SEII555",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [],
-      "likes": [],
-      "createAt": "2024-02-25T07:04:19.291Z"
-    },
-    {
-      "id": "024e0c2a-b9ac-443a-876d-7977c2c036fc",
-      "content": "last",
-      "image": null,
-      "postType": "text",
-      "author": {
-        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-        "name": "Saad Hasan",
-        "avatar": "uploads/avatar/avatar-1708789609571-36760872.jpeg"
-      },
-      "comments": [
-        {
-          "id": "2c7c6214-1125-491e-ba49-678256c87006",
-          "comment": "awesome",
-          "createdAt": "2024-03-02T13:11:04.264Z",
-          "author": {
-            "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
-            "name": "Saad Hasan",
-            "avatar": "uploads/avatar/avatar-1709359602298-935951666.jpg"
-          }
-        }
-      ],
-      "likes": [],
-      "createAt": "2024-02-25T07:16:53.349Z"
+      "createAt": "2024-03-02T20:11:18.116Z"
     }
   ],
   "comments": [],
@@ -593,7 +444,7 @@
       "password": "$2b$08$t5Aar/0hgHTMdCeLtn3KhOlWDVIAHcFUTkRPeWASPhbYAea5kxKvW",
       "firstName": "Saad",
       "lastName": "Hasan",
-      "avatar": "uploads/avatar/avatar-1709359602298-935951666.jpg",
+      "avatar": "uploads/avatar/avatar-1709396258597-599022469.jpeg",
       "email": "saadh392@mail.com",
       "bio": "Saad is an excellent member of LWS who keeps himself updated with technology and stays relevant. He is a tech enthusiast and does not hesitate to help developers in need. Update "
     },

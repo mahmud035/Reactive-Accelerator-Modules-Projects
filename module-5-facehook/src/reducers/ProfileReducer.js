@@ -8,6 +8,9 @@ const initialState = {
 };
 
 const profileReducer = (state, action) => {
+  // console.log('state inside profileReducer =>', state);
+  // console.log('action inside profileReducer =>', action);
+
   switch (action.type) {
     // Data Fetching
     case actions.profile.DATA_FETCHING: {
@@ -52,6 +55,16 @@ const profileReducer = (state, action) => {
         },
       };
     }
+    // User's Post Data Deleted
+    case actions.profile.DATA_DELETED: {
+      return {
+        ...state,
+        loading: false,
+        posts: state.posts.filter((post) => post.id !== action?.data),
+      };
+    }
+    // User's Post Data Edited
+
     // Default
     default: {
       return state;

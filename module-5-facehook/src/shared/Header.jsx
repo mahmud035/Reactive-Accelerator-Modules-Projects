@@ -3,15 +3,10 @@ import homeIcon from '../assets/icons/home.svg';
 import notification from '../assets/icons/notification.svg';
 import logo from '../assets/images/logo.svg';
 import Logout from '../components/auth/Logout';
-import useAuth from '../hooks/useAuth';
-import useProfile from '../hooks/useProfile';
+import useGetUser from '../hooks/useGetUser';
 
 const Header = () => {
-  const { auth } = useAuth();
-  const { state } = useProfile();
-
-  // Decide where to get the user
-  const user = state?.user ?? auth?.user;
+  const user = useGetUser();
 
   // Show dummy image if user's avatar is not found
   const userNameFirstChar = user?.firstName?.slice(0, 1)?.toUpperCase();
@@ -25,10 +20,7 @@ const Header = () => {
       <div className="container flex flex-col items-center justify-between gap-6 sm:flex-row">
         {/* Logo  */}
         <Link to="/">
-          <img
-            className="max-w-[100px] rounded-full lg:max-w-[130px]"
-            src={logo}
-          />
+          <img className="max-w-[100px] lg:max-w-[130px]" src={logo} />
         </Link>
         {/* nav links   */}
         <div className="flex items-center space-x-4">

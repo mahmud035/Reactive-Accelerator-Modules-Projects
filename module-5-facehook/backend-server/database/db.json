@@ -410,7 +410,7 @@
     },
     {
       "id": "cd6ce805-ece3-4281-a001-0bc105bb9a6a",
-      "content": "value updated",
+      "content": "value updated ",
       "image": null,
       "postType": "text",
       "author": {
@@ -423,8 +423,8 @@
       "createAt": "2024-03-02T18:25:06.546Z"
     },
     {
-      "id": "ec986fbb-1963-4f8d-925f-55d854852c37",
-      "content": "test",
+      "id": "6dbe36e6-222f-4c86-a3f9-6d8868f2761a",
+      "content": "updated test data",
       "image": null,
       "postType": "text",
       "author": {
@@ -434,7 +434,21 @@
       },
       "comments": [],
       "likes": [],
-      "createAt": "2024-03-02T20:11:18.116Z"
+      "createAt": "2024-03-02T20:30:01.119Z"
+    },
+    {
+      "id": "80f51972-022c-401d-aaf8-1962b69e6517",
+      "content": "new test data update",
+      "image": null,
+      "postType": "text",
+      "author": {
+        "id": "6fd3ed42-2275-4d5f-a436-e5a3bf586c56",
+        "name": "Saad Hasan",
+        "avatar": "uploads/avatar/avatar-1709396258597-599022469.jpeg"
+      },
+      "comments": [],
+      "likes": [],
+      "createAt": "2024-03-02T20:46:19.464Z"
     }
   ],
   "comments": [],

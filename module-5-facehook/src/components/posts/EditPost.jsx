@@ -1,38 +1,27 @@
-import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 import { actions } from '../../actions';
 import addPhotoIcon from '../../assets/icons/addPhoto.svg';
 import useAxios from '../../hooks/useAxios';
 import useGetUser from '../../hooks/useGetUser';
 import usePost from '../../hooks/usePost';
-import Field from '../ui/Field';
 
 const EditPost = () => {
   const user = useGetUser();
   const { dispatch, setShowPostEntry, editPost, setEditPost } = usePost();
   const { api } = useAxios();
+  const [content, setContent] = useState(editPost?.content || '');
 
-  console.log('editPost =>', editPost);
-
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-      content: '',
-    },
-  });
-
-  const onSubmit = async (formData) => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
     dispatch({ type: actions.post.DATA_FETCHING });
 
     try {
       const response = await api.patch(
-        `${import.meta.env.VITE_SERVER_BASE_URL}/posts/${editPost?.id}`
+        `${import.meta.env.VITE_SERVER_BASE_URL}/posts/${editPost?.id}`,
+        { content }
       );
-
       console.log(response);
+
       if (response.status === 200) {
         // set edited post to state
         dispatch({ type: actions.post.DATA_EDITED, data: response.data });
@@ -54,7 +43,7 @@ const EditPost = () => {
       </h6>
 
       {/* form */}
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={onSubmit}>
         <div className="flex items-center justify-between gap-2 mb-3 lg:mb-6 lg:gap-4">
           <div className="flex items-center gap-3">
             <img
@@ -82,19 +71,14 @@ const EditPost = () => {
         </div>
 
         {/* Post Text Input  */}
-        <Field label="" error={errors.content}>
-          <textarea
-            {...register('content', {
-              required: 'Adding some text is mandatory!',
-            })}
-            onChange={(e) => setValue('content', e.target.value)}
-            defaultValue={editPost ? editPost?.content : ''}
-            name="content"
-            id="content"
-            placeholder="Share your thoughts..."
-            className="h-[120px] w-full bg-transparent focus:outline-none lg:h-[160px]"
-          />
-        </Field>
+        <textarea
+          onChange={(e) => setContent(e.target.value)}
+          value={content}
+          name="content"
+          id="content"
+          placeholder="Share your thoughts..."
+          className="h-[120px] w-full bg-transparent focus:outline-none lg:h-[160px]"
+        />
 
         <div className="border-t border-[#3F3F3F] pt-4 lg:pt-6">
           <button

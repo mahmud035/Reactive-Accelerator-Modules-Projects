@@ -5,7 +5,7 @@ const PostBody = ({ poster, content }) => {
       {poster && (
         <div className="flex items-center justify-center overflow-hidden">
           <img
-            className="max-w-full"
+            className="max-w-full pb-2"
             src={`${import.meta.env.VITE_SERVER_BASE_URL}/${poster}`}
             alt="poster"
           />

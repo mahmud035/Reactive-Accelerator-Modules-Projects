@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { actions } from '../../actions';
 import addPhotoIcon from '../../assets/icons/addPhoto.svg';
@@ -10,19 +11,40 @@ const PostEntry = () => {
   const user = useGetUser();
   const { dispatch, setShowPostEntry } = usePost();
   const { api } = useAxios();
+  const fileUploadRef = useRef();
 
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
       content: '',
+      image: null,
     },
   });
 
+  const handleImageUpload = (event) => {
+    event.preventDefault();
+    fileUploadRef.current.addEventListener('change', uploadPostImage);
+    fileUploadRef.current.click();
+  };
+
+  const uploadPostImage = () => {
+    const formData = new FormData();
+
+    for (const file of fileUploadRef.current.files) {
+      console.log(file);
+      formData.append('image', file);
+      setValue('image', file);
+    }
+  };
+
+  //* Create New Post
   const onSubmit = async (formData) => {
-    // set loading to true
+    console.log('formData =>', formData);
+
     dispatch({ type: actions.post.DATA_FETCHING });
 
     try {
@@ -31,14 +53,13 @@ const PostEntry = () => {
         { formData }
         //! In this case formData must be wrapped inside an object
       );
+      console.log('response =>', response);
 
       if (response.status === 200) {
-        // set newly created post to state
         dispatch({ type: actions.post.DATA_CREATED, data: response.data });
         setShowPostEntry(false);
       }
     } catch (error) {
-      // set error message to state
       dispatch({
         type: actions.post.DATA_FETCH_ERROR,
         error: error.message,
@@ -70,14 +91,23 @@ const PostEntry = () => {
             </div>
           </div>
 
-          <label
-            className="btn-primary cursor-pointer !text-gray-100"
-            htmlFor="photo"
-          >
-            <img src={addPhotoIcon} alt="Add Photo" />
-            Add Photo
-          </label>
-          <input type="file" name="photo" id="photo" className="hidden" />
+          <button onClick={handleImageUpload}>
+            <label
+              className="btn-primary cursor-pointer !text-gray-100"
+              htmlFor="photo"
+            >
+              <img src={addPhotoIcon} alt="Add Photo" />
+              Add Photo
+            </label>
+          </button>
+          <input
+            {...register('image')}
+            type="file"
+            ref={fileUploadRef}
+            name="photo"
+            id="photo"
+            hidden
+          />
         </div>
 
         {/* Post Text Input  */}

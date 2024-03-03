@@ -23,6 +23,7 @@ const PostHeader = ({ post }) => {
 
   const shouldShowThreeDotIcon = post?.author?.id === auth?.user?.id;
 
+  //* Delete Post
   const handleDeletePost = async () => {
     dispatch({ type: actions.post.DATA_FETCHING });
 

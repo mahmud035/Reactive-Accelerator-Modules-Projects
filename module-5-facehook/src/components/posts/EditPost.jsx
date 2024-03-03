@@ -11,7 +11,8 @@ const EditPost = () => {
   const { api } = useAxios();
   const [content, setContent] = useState(editPost?.content || '');
 
-  const onSubmit = async (e) => {
+  //* Edit Post
+  const handleEditPost = async (e) => {
     e.preventDefault();
     dispatch({ type: actions.post.DATA_FETCHING });
 
@@ -43,7 +44,7 @@ const EditPost = () => {
       </h6>
 
       {/* form */}
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleEditPost}>
         <div className="flex items-center justify-between gap-2 mb-3 lg:mb-6 lg:gap-4">
           <div className="flex items-center gap-3">
             <img

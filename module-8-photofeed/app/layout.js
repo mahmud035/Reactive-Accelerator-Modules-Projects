@@ -15,6 +15,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         <div className="container my-4 lg:my-8">{children}</div>
+
+        {/* Render Modal */}
+        <div id="modal-root-content" />
       </body>
     </html>
   );

@@ -1,7 +1,14 @@
-import { getDictionary } from './dictionaries/dictionaries';
+import PhotoList from '@/components/PhotoList';
 
-export default async function HomePage({ params: { lang } }) {
-  const dict = await getDictionary(lang);
+const HomePage = async () => {
+  const response = await fetch(`${process.env.BASE_API_URL}/photos`);
+  const photos = await response.json();
 
-  return <div>{dict.share}</div>;
-}
+  return (
+    <div>
+      <PhotoList photos={photos} />
+    </div>
+  );
+};
+
+export default HomePage;

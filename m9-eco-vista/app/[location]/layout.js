@@ -16,10 +16,10 @@ const LocationLayout = ({ children, aqi, temperature, weather, wind }) => {
         <div className="container">
           <div className="grid grid-cols-12 py-16 gap-y-8 lg:gap-8 2xl:gap-20 2xl:py-20">
             {children}
-            {aqi}
-            {weather}
-            {wind}
             {temperature}
+            {aqi}
+            {wind}
+            {weather}
           </div>
         </div>
       </main>
